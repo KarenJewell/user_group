@@ -12,10 +12,6 @@ def clear():
         system('clear')
 
 
-options = ['paper', 'rock', 'scissors', 'spock']
-all_options = options + ['exit']
-p1_result, p2_result = 0, 0
-
 """Using dictionary as suggested by @0x1ac"""
 ### Only records wins, e.g. rock wins over scissors
 wins_over = {
@@ -24,6 +20,10 @@ wins_over = {
             'scissors':['paper','spock'],
             'spock':['rock','scissors']
             }
+
+options = list(wins_over.keys())
+all_options = options + ['exit']
+p1_result, p2_result = 0, 0
 
 
 def rps(p1: str, p2: str) -> str:
